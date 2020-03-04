@@ -218,6 +218,8 @@ public class Services {
                 heure  = minutes/60;
                 minutes = minutes%60;
 
+                if(minutes < 10)
+                    return heure+"h0"+minutes;
                 return heure+"h"+minutes;
             }
             return "00h00";
